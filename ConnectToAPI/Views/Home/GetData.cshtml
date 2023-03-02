@@ -1,0 +1,51 @@
+﻿@model ConnectToAPI.Models.Certificates
+
+@{
+    ViewData["Title"] = "GetData";
+}
+
+<h1>Energy Performances Data</h1>
+
+<h2>
+    Domestic Data
+</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.DomesticData)
+        {
+            <tr>
+                <td>
+                    @item
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h2>
+    Public Buildings Data
+</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.PublicBuildingsData)
+        {
+            <tr>
+                <td>
+                    @item
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
